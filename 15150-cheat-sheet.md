@@ -111,3 +111,20 @@
 
 ## Boolean Operations
 - `andalso`, `orelse`, `not`.
+
+## Work & Span
+- **Work:** Worst case number of steps to sequentially evaluate code.
+- **Span:** Worst case number of steps to evaluate code in parallel, given ∞ processors.
+
+### Recurrences
+- **Definition**: Equation describing complexity of recursive algorithm.
+
+### Steps:
+1. Write recurrence.
+2. Find # levels, nodes at level i, work per node @ level i
+3. Summation + Big-O bound.
+
+### Tree Method:
+```math
+\sum_{i=0}^{\#\text{ levels}} (\text{nodes @ level } i) \times (\text{work per node @ level } i)
+```
