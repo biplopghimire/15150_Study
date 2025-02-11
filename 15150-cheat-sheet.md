@@ -19,10 +19,10 @@
 ## Function Application
 - **Big Idea:** `e e’ : t2` iff `e : t1 -> t2` and `e’ : t1`
 
-## Totality
-
--**Totality Definition:** A function `f : t1 -> t2` is total if for all valuable inputs `x : t1`, `f x ⇒ v` where `v` is a value of type `t2`.
-- Proving totality requires `⇒`.
+## Totality and Valuability
+**Definition (Valuable).** A well-typed expression `e` is *valuable* if there exists a value `v` such that  
+`e ⟹ v`. We also say that *e evaluates to a value*.
+**Definition (Total).** A well-typed expression `e1 : t1 -> t2`, for types `t1` and `t2`, is *total* if for all values `e2 : t1`, the expression `e1 e2` is valuable.
 
 ## Pattern Matching
 - Patterns are used in lambda expressions, case expressions, `val`, and `fun` bindings.
@@ -90,7 +90,8 @@
 ## Boolean Operations
 - `andalso`, `orelse`, `not`.
 
-## Induction 
+## Proofs 
+- Proving totality requires `⇒`.
 - For structural inductions on a list `L = (x::xs)`:
   - **Base Case (BC):** `[]`
   - **Inductive Hypothesis (IH):** Assume the theorem holds for `L = xs`.
