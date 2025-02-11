@@ -17,14 +17,12 @@
 - **Note:** Declarations are not expressions. If asked for an expression of some type, do not write a `val` or `fun` declaration.
 
 ## Function Application
-- **Big (Function) Idea:** `e e’ : t2` iff `e : t1 -> t2` and `e’ : t1`
+- **Big Idea:** `e e’ : t2` iff `e : t1 -> t2` and `e’ : t1`
 
 ## Totality
+
+-**Totality Definition:** A function `f : t1 -> t2` is total if for all valuable inputs `x : t1`, `f x ⇒ v` where `v` is a value of type `t2`.
 - Proving totality requires `⇒`.
-- For structural inductions on a list `L = (x::xs)`:
-  - **Base Case (BC):** `[]`
-  - **Inductive Hypothesis (IH):** Assume the theorem holds for `L = xs`.
-  - **Want to Show (WTS):** Theorem holds for `L = (x::xs)`.
 
 ## Pattern Matching
 - Patterns are used in lambda expressions, case expressions, `val`, and `fun` bindings.
@@ -92,5 +90,8 @@
 ## Boolean Operations
 - `andalso`, `orelse`, `not`.
 
-## Totality Definition
-- A function `f : t1 -> t2` is total if for all valuable inputs `x : t1`, `f x ⇒ v` where `v` is a value of type `t2`.
+## Induction 
+- For structural inductions on a list `L = (x::xs)`:
+  - **Base Case (BC):** `[]`
+  - **Inductive Hypothesis (IH):** Assume the theorem holds for `L = xs`.
+  - **Want to Show (WTS):** Theorem holds for `L = (x::xs)`.
